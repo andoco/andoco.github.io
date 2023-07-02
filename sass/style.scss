@@ -1,7 +1,7 @@
 $font-stack: Helvetica, sans-serif;
 $header-font-stack: Monospace, sans-serif;
 $primary-color: #333;
-$accent-color: #55adf8;
+$background-color: #f4f4f4;
 
 * {
   box-sizing: border-box;
@@ -68,9 +68,14 @@ section.cards {
   justify-content: space-between;
 
   article {
-    background-color: #55adf8;
     flex: 0 1 25em;
-    margin: 1em;
+    margin: 0 1em 1em 0;
     padding: 1em;
+    background-color: $background-color;
   }
+}
+
+article > section {
+  background-color: $background-color;
+  padding: 1em;
 }
