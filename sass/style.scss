@@ -1,16 +1,16 @@
 $font-stack: Helvetica, sans-serif;
 $header-font-stack: Monospace, sans-serif;
 $primary-color: #333;
-$secondary-color: #666;
+$accent-color: #55adf8;
 
 body {
   font: 100% $font-stack;
   color: $primary-color;
 }
 
-header {
+header,
+footer {
   font: 100% $header-font-stack;
-  border-bottom: 1px solid $secondary-color;
 
   a {
     text-decoration: none;
@@ -23,7 +23,10 @@ header {
       list-style: none;
     }
 
-    li { display: inline-block; }
+    li {
+      display: inline-block;
+      background-color: $accent-color;
+    }
 
     a {
       display: block;
@@ -32,11 +35,6 @@ header {
   }
 }
 
-footer {
-  border-top: 1px solid $secondary-color;
-}
-
 main {
   font: 100% sans-serif;
-  padding: 16px;
 }
