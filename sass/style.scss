@@ -7,6 +7,7 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
   margin: 0;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -42,4 +43,17 @@ footer {
 main {
   font: 100% sans-serif;
   flex: 1;
+}
+
+section.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  article {
+    background-color: #55adf8;
+    flex: 0 1 25em;
+    margin: 1em;
+    padding: 1em;
+  }
 }

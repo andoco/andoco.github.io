@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>{{ config.title }}</title>
-    <link rel="stylesheet" href="{{ get_url(path="test2.css") }}">
-  </head>
+{% extends "base.html" %}
 
-  <body>
-    <main>
-      <section>
-        {% for page in section.pages %}
-        <article>
-          <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-          {{ page.summary | safe }}
-        </article>
-        {% endfor %}
-      </section>
-    </main>
-  </body>
-</html>
+{% block content %}
+<section class="cards">
+  {% for page in section.pages %}
+  <article>
+    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+    {{ page.summary | safe }}
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}
