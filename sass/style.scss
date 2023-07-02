@@ -6,6 +6,13 @@ $accent-color: #55adf8;
 body {
   font: 100% $font-stack;
   color: $primary-color;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 header,
@@ -37,4 +44,5 @@ footer {
 
 main {
   font: 100% sans-serif;
+  flex: 1;
 }
