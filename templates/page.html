@@ -9,7 +9,7 @@
       <ul>
         {% for tag in page.taxonomies.tags %}
           {% set url = get_taxonomy_url(kind="tags", name=tag, lang=page.lang) %}
-          <li><a href="{{ url }}">{{ tag }}</a></li>
+          <li><a href="{{ url }}">#{{ tag }}</a></li>
         {% endfor %}
       </ul>
     </nav>
