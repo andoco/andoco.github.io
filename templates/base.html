@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ config.title }}</title>
+  <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+</head>
+
+<body>
+  <!-- <pre>{{ __tera_context }}</pre> -->
+  <header>
+    <hgroup>
+      <h1><a href="{{ get_url(path='@/_index.md') }}">{{ config.title }}</a></h1>
+      <h2>Adventures in creative programming</h2>
+    </hgroup>
+    <nav>
+      {% set rootsection = get_section(path="_index.md") %}
+      <ul>
+        {% for path in rootsection.subsections %}
+          {% set section = get_section(path=path) %}
+          <li><a href="{{ section.permalink }}">{{ section.title }}</a></li>
+        {% endfor %}
+        <li><a href="{{ get_url(path='/tags/') }}">Tags</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %} {% endblock %}
+  </main>
+  <footer>
+    <p>© 2023 Andrew O'Connor</p>
+  </footer>
+</body>
+
+</html>

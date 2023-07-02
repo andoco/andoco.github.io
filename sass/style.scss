@@ -1,0 +1,42 @@
+$font-stack: Helvetica, sans-serif;
+$header-font-stack: Monospace, sans-serif;
+$primary-color: #333;
+$secondary-color: #666;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+header {
+  font: 100% $header-font-stack;
+  border-bottom: 1px solid $secondary-color;
+
+  a {
+    text-decoration: none;
+  }
+
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li { display: inline-block; }
+
+    a {
+      display: block;
+      padding: 6px 12px;
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid $secondary-color;
+}
+
+main {
+  font: 100% sans-serif;
+  padding: 16px;
+}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+  <p>Posts and projects related to creative programming.</p>
+</section>
+<section>
+  <h2>Sections</h2>
+  <ul>
+  {% for path in section.subsections %}
+    {% set section = get_section(path=path) %}
+    <li><a href="{{ section.permalink }}">{{ section.title }}</a></li>
+  {% endfor %}
+  </ul>
+</section>
+{% endblock content %}
