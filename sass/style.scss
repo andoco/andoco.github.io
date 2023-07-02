@@ -29,17 +29,10 @@ footer {
     ul {
       margin: 0;
       padding: 0;
-      list-style: none;
     }
 
     li {
       display: inline-block;
-      background-color: $accent-color;
-    }
-
-    a {
-      display: block;
-      padding: 6px 12px;
     }
   }
 }
