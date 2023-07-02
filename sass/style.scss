@@ -3,6 +3,10 @@ $header-font-stack: Monospace, sans-serif;
 $primary-color: #333;
 $accent-color: #55adf8;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font: 100% $font-stack;
   color: $primary-color;
