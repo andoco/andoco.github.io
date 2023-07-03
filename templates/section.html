@@ -4,5 +4,5 @@
 
 {% block content %}
 <h2>{{ section.title }}</h2>
-{{ macros::cards(section=section, max=section.pages | length) }}
+{{ macros::cards(section=section) }}
 {% endblock %}

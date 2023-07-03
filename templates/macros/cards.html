@@ -1,4 +1,9 @@
-{% macro cards(section, max) %}
+{% macro cards(section, max=-1) %}
+
+{% if max == -1 %}
+  {% set max = section.pages | length %}
+{% endif %}
+
 <section class="cards">
   {% for page in section.pages | slice(end=max) %}
   <article>
