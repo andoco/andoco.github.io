@@ -12,4 +12,6 @@ The simulation features an airplane that can take off and navigate an endless ci
 
 <!-- more -->
 
-[Play](/flight-sim-bevy-rust) the simulation now.
+It is compiled to WASM and available to play online in your browser.
+
+{{ button(label="Launch flight sim", url="/flight-sim-bevy-rust") }}

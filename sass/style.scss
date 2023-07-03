@@ -2,6 +2,7 @@ $font-stack: Helvetica, sans-serif;
 $header-font-stack: Monospace, sans-serif;
 $primary-color: #333;
 $background-color: #f4f4f4;
+$accent-color: #3465a4;
 
 * {
   box-sizing: border-box;
@@ -19,6 +20,7 @@ body {
 
 a {
   text-decoration: none;
+  color: $accent-color;
 }
 
 a:hover {
@@ -77,4 +79,13 @@ section.cards {
 article > section {
   background-color: $background-color;
   padding: 1em;
+}
+
+.button {
+  background: $accent-color;
+  padding: 1em;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  line-height: 3em;
 }
