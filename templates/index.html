@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
+{% import "macros/cards.html" as macros %}
+
 {% block content %}
 <section>
   <p>Posts and projects related to creative programming.</p>
 </section>
+<h2>Recent</h2>
+{{ macros::cards(section=section, max=3) }}
 {% endblock content %}

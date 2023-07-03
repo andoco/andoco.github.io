@@ -1,13 +1,8 @@
 {% extends "base.html" %}
 
+{% import "macros/cards.html" as macros %}
+
 {% block content %}
 <h2>{{ section.title }}</h2>
-<section class="cards">
-  {% for page in section.pages %}
-  <article>
-    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-    {{ page.summary | safe }}
-  </article>
-  {% endfor %}
-</section>
+{{ macros::cards(section=section, max=section.pages | length) }}
 {% endblock %}

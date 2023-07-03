@@ -1,0 +1,10 @@
+{% macro cards(section, max) %}
+<section class="cards">
+  {% for page in section.pages | slice(end=max) %}
+  <article>
+    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+    {{ page.summary | safe }}
+  </article>
+  {% endfor %}
+</section>
+{% endmacro cards %}
