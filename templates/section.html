@@ -3,6 +3,10 @@
 {% import "macros/cards.html" as macros %}
 
 {% block content %}
-<h2>{{ section.title }}</h2>
-{{ macros::cards(section=section) }}
+<section>
+    <header>
+        <h2>{{ section.title }}</h2>
+    </header>
+    {{ macros::cards(section=section) }}
+</section>
 {% endblock %}

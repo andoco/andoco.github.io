@@ -4,8 +4,9 @@
 
 {% block content %}
 <section>
-  <p>Posts and projects related to creative programming.</p>
+  <header>
+    <h2>Recent</h2>
+  </header>
+  {{ macros::cards(section=section, max=3) }}
 </section>
-<h2>Recent</h2>
-{{ macros::cards(section=section, max=3) }}
 {% endblock content %}
