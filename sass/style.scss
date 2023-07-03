@@ -2,6 +2,7 @@ $font-stack: Helvetica, sans-serif;
 $header-font-stack: Monospace, sans-serif;
 $primary-color: #333;
 $background-color: #f4f4f4;
+$background-color-secondary: #e4e4e4;
 $accent-color: #3465a4;
 
 * {
@@ -76,9 +77,17 @@ section.cards {
   }
 }
 
-article > section {
-  background-color: $background-color;
-  padding: 1em;
+article {
+  header {
+    background-color: $background-color-secondary;
+    padding: 1em;
+    margin-bottom: 0;
+  }
+
+  section {
+    background-color: $background-color;
+    padding: 1em;
+  }
 }
 
 .button {
