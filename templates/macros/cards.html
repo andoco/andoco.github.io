@@ -6,10 +6,18 @@
 
 <section class="cards">
   {% for page in section.pages | slice(end=max) %}
-  <article>
-    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-    {{ page.summary | safe }}
-  </article>
+    <article>
+      <header>
+        <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+      </header>
+
+      {% if page.extra.thumbnail %}
+        {% set thumbnail_image = resize_image(path=page.extra.thumbnail, width=512, op="fit_width") %}
+        <img src="{{ thumbnail_image.url }}" style="max-width: 100%;" />
+      {% endif %}
+
+      {{ page.summary | safe }}
+    </article>
   {% endfor %}
 </section>
 {% endmacro cards %}

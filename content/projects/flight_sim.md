@@ -4,6 +4,9 @@ date = 2023-07-02
 
 [taxonomies]
 tags = ["rust", "bevy", "game"]
+
+[extra]
+thumbnail = "flight-sim-bevy-rust.png"
 +++
 
 A basic flight simulation written using the [Bevy](https://bevyengine.org/) game engine in [Rust](https://www.rust-lang.org/).
