@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{% set title = [config.title] %}
+{% if page %}
+{% set title = title | concat(with=page.components) %}
+{% elif section %}
+{% set title = title | concat(with=section.components) %}
+{% elif term %}
+{% set title = title | concat(with=[taxonomy.name, term.name]) %}
+{% elif taxonomy %}
+{% set title = title | concat(with=taxonomy.name) %}
+{% endif %}
+
 <head>
   {% include "google_analytics.html" %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ config.title }}</title>
+  <title>{{ title | join(sep=" | ") }}</title>
   <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
 </head>
 
