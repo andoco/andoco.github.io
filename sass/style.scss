@@ -32,6 +32,22 @@ a:hover {
 header,
 footer {
   font: 100% $header-font-stack;
+}
+
+header:first-of-type {
+  margin-bottom: 1em;
+
+  hgroup {
+    margin-bottom: 1em;
+
+    h1 {
+      display: inline;
+    }
+    h2 {
+      display: inline;
+      font-size: 1em;
+    }
+  }
 
   nav {
     ul {
@@ -45,26 +61,6 @@ footer {
   }
 }
 
-body > header {
-  margin-bottom: 1em;
-
-  hgroup {
-    margin-bottom: 1em;
-  }
-  h1 {
-    display: inline;
-  }
-  h2 {
-    display: inline;
-    font-size: 1em;
-  }
-}
-
-main {
-  font: 100% sans-serif;
-  flex: 1;
-}
-
 section.cards {
   display: flex;
   flex-wrap: wrap;
@@ -72,19 +68,22 @@ section.cards {
   article {
     flex: 0 1 25em;
     margin: 0 1em 1em 0;
-    padding: 1em;
     background-color: $background-color;
+  }
+
+  section:first-of-type {
+    padding: 1em;
   }
 }
 
 article {
-  header {
+  header:first-of-type {
     background-color: $background-color-secondary;
     padding: 1em;
     margin-bottom: 0;
   }
 
-  section {
+  section:first-of-type {
     background-color: $background-color;
     padding: 1em;
   }
