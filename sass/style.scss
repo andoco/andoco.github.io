@@ -69,6 +69,11 @@ section.cards {
     flex: 0 1 25em;
     margin: 0 1em 1em 0;
     background-color: $background-color;
+
+    header {
+      background-color: $background-color-secondary;
+      padding: 1em;
+    }
   }
 
   section:first-of-type {
@@ -77,15 +82,8 @@ section.cards {
 }
 
 article {
-  header:first-of-type {
-    background-color: $background-color-secondary;
-    padding: 1em;
-    margin-bottom: 0;
-  }
-
   section:first-of-type {
-    background-color: $background-color;
-    padding: 1em;
+    padding-top: 1em;
   }
 }
 
