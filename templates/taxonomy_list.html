@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
+<section>
+<header>
+  <h2>{{ taxonomy.name }}</h2>
+</header>
 <ul>
 {% for term in terms %}
   <li><a href="{{ term.permalink }}">{{ term.name }}</a></li>
 {% endfor %}
 </ul>
+</section>
 {% endblock content %}
