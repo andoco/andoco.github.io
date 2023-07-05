@@ -1,9 +1,10 @@
+{% set GA_ID = get_env(name="GA_ID", default="") %}
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9C4V628JY"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_ID }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-Z9C4V628JY');
+  gtag('config', '{{ GA_ID }}');
 </script>
