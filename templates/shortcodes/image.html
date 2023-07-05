@@ -1,0 +1,4 @@
+{% set width = width | default(value=1024) %}
+{% set op = op | default(value="fit_width") %}
+{% set image = resize_image(path=path, width=width, op=op) %}
+<img src="{{ image.url }}" style="max-width: 100%;"/>
