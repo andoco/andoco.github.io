@@ -1,4 +1,7 @@
-{% set width = width | default(value=1024) %}
+{% set metadata = get_image_metadata(path=path) %}
+{% set width = width | default(value=metadata.width) %}
+{% set height = height | default(value=metadata.height) %}
 {% set op = op | default(value="fit_width") %}
-{% set image = resize_image(path=path, width=width, op=op) %}
+{% set format = format | default(value="jpg") %}
+{% set image = resize_image(path=path, width=width, height=height, op=op, format=format) %}
 <img src="{{ image.url }}" style="max-width: 100%;"/>

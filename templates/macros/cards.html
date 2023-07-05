@@ -12,7 +12,7 @@
       </header>
 
       {% if page.extra.thumbnail %}
-        {% set thumbnail_image = resize_image(path=page.extra.thumbnail, width=512, op="fit_width") %}
+        {% set thumbnail_image = resize_image(path=page.extra.thumbnail, width=512, op="fit_width", format="jpg") %}
         <img src="{{ thumbnail_image.url }}" style="max-width: 100%;" />
       {% endif %}
 
